@@ -7,6 +7,8 @@ import { ReactComponent as Logo } from 'icons/logo.svg';
 import Avatar from './Avatar/Avatar';
 import Button from 'shared/components/Button/Button';
 
+import transformNumber from 'helpers/transformNumber';
+
 const USERS_ID_LS = 'following-users-id';
 
 const TweetCard = ({ tweet }) => {
@@ -35,9 +37,12 @@ const TweetCard = ({ tweet }) => {
     <Card>
       <Logo style={{ marginBottom: 242 }} />
       <Avatar avatar={avatar} />
-      <StyledParagraph>{tweets} tweets</StyledParagraph>
+      <StyledParagraph>{transformNumber(tweets)} tweets</StyledParagraph>
       <StyledParagraph>
-        {isFollowing ? followers + 1 : followers} followers
+        {isFollowing
+          ? transformNumber(followers + 1)
+          : transformNumber(followers)}{' '}
+        followers
       </StyledParagraph>
       <Button isFollowing={isFollowing} onClick={toggleIsFollowing}>
         {isFollowing ? 'Following' : 'Follow'}

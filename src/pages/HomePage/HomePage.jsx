@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { Wrapper, StyledTitle, StyledLink } from './HomePage.styled';
 
 const HomePage = () => {
   return (
-    <>
-      <div>Home page</div>
-      <Link to="/tweets">Tweets</Link>
-    </>
+    <Wrapper>
+      <StyledTitle>list of tweets</StyledTitle>
+      <StyledLink to="/tweets">Go to tweets</StyledLink>
+    </Wrapper>
   );
 };
 

@@ -8,7 +8,13 @@ import TweetCard from 'modules/TweetCard/TweetCard';
 import Button from 'shared/components/Button/Button';
 import Loader from 'shared/components/Loader/Loader';
 
-import { StyledList, StyledLink, Wrapper, Div } from './TweetsPage.styled';
+import {
+  StyledList,
+  StyledLink,
+  Wrapper,
+  Div,
+  StyledError,
+} from './TweetsPage.styled';
 
 const TweetsPage = () => {
   const [tweets, setTweets] = useState([]);
@@ -39,6 +45,9 @@ const TweetsPage = () => {
         <StyledLink to="/">
           <MdArrowBackIosNew size={18} /> Go back
         </StyledLink>
+        {error && (
+          <StyledError>{error}. Please try to reload the page.</StyledError>
+        )}
         <StyledList>
           {tweets.map(tweet => (
             <li key={tweet.id}>

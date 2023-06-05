@@ -35,3 +35,13 @@ export const Wrapper = styled.div`
 export const Div = styled.div`
   position: relative;
 `;
+
+export const StyledError = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: darkred;
+
+  width: 600px;
+  margin: 0 auto 20px;
+`;

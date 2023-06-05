@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-// import imageWrapper from 'images/avatar-wrapper.png';
-// import imageWrapper from 'icons/avatar-wrapper.svg';
 
 export const Container = styled.div`
   width: 380px;

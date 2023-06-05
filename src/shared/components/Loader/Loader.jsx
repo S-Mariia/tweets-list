@@ -1,22 +1,22 @@
 import { MutatingDots } from 'react-loader-spinner';
 
+import { Wrapper } from './Loader.styled';
+
 const Loader = () => {
   return (
-    <MutatingDots
-      height="160"
-      width="160"
-      color="#C07043"
-      secondaryColor="#4fa94d"
-      radius="15.5"
-      ariaLabel="mutating-dots-loading"
-      wrapperStyle={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-      }}
-      visible={true}
-    />
+    <Wrapper>
+      <MutatingDots
+        height="100"
+        width="100"
+        color="#51309e"
+        secondaryColor="#5cb76a"
+        radius="12.5"
+        ariaLabel="mutating-dots-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
+    </Wrapper>
   );
 };
 
