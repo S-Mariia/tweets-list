@@ -5,12 +5,14 @@ import {
   StyledImg,
 } from './Avatar.styled';
 
+import defaultPhoto from 'images/default-image.png';
+
 const Avatar = ({ avatar }) => {
   return (
     <Container>
       <DecorativeDiv />
       <AvatarWrapper>
-        <StyledImg src={avatar} />
+        <StyledImg src={avatar || defaultPhoto} alt="actor avatar" />
       </AvatarWrapper>
     </Container>
   );

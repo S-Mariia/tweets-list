@@ -63,8 +63,3 @@ export const StyledImg = styled.img`
   width: 100%;
   height: 100%;
 `;
-
-/* 
-  background-image: url(${imageWrapper});
-  background-size: 80px, cover;
-  background-repeat: no-repeat; */
